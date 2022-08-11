@@ -11,6 +11,16 @@ public class CarController {
     @GetMapping("/")
     public String getCarsView(Model model) {
 
-        return "cars/cars";
+        return "cars";
+    }
+
+    @GetMapping("/showCars")
+    public String getShowCars() {
+        return "showCars";
+    }
+
+    @GetMapping("/enterCars")
+    public String getEnterCars() {
+        return "enterCars";
     }
 }
