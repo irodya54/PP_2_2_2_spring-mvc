@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,5 +11,9 @@
         <h1 th:text="${msg}"></h1>
     </th:block>
 </div>
+<br>
+<form action="cars/">
+    <button type="submit">Go to the page with cars</button>
+</form>
 </body>
 </html>
