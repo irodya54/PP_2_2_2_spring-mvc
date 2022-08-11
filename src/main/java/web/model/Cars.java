@@ -8,6 +8,12 @@ public class Cars {
     public Cars() {
     }
 
+    public Cars(String brand, String model, String gosNumber) {
+        this.brand = brand;
+        this.model = model;
+        this.gosNumber = gosNumber;
+    }
+
     public String getBrand() {
         return brand;
     }

@@ -4,13 +4,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import web.model.Cars;
 
 @Controller
 @RequestMapping("/cars")
 public class CarController {
     @GetMapping("/")
-    public String getCarsView(Model model) {
-
+    public String getCarsView() {
         return "cars";
     }
 
@@ -20,7 +21,11 @@ public class CarController {
     }
 
     @GetMapping("/enterCars")
-    public String getEnterCars() {
+    public String getEnterCars(@RequestParam("brand") String brand,
+                               @RequestParam("model") String model,
+                               @RequestParam("gosNumber") String gosNumber) {
+        Cars car = new Cars(brand, model, gosNumber);
+
         return "enterCars";
     }
 }
