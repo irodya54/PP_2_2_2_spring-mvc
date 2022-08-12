@@ -1,14 +1,18 @@
 package web.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
-import web.dao.CarDao;
 import web.model.Cars;
-public class CarServiceImpl implements CarService{
-    private CarDao carDao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CarServiceImpl implements CarService {
+    private List<Cars> carsList;
+
     @Override
-    public void addCars(Cars car) {
-        carDao.addCar(car);
+    public void addCar(Cars car) {
+        if (carsList.isEmpty()) {
+            carsList = new ArrayList<>();
+        }
+        carsList.add(car);
     }
 }
