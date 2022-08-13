@@ -23,7 +23,12 @@
 <p>
     <a href="../index.html" th:href="@{/}">Return to home</a>
 </p>
+<form th:action="@{showCars?count='count'}">
+    <label for="count">Count</label>
+    <input type="text" th:name="count" id="count"/>
+    <input type="submit" th:value="Refresh">
 
+</form>
 
 </body>
 </html>
