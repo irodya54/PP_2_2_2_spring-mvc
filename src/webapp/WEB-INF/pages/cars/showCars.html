@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show Cars</title>
+</head>
+<body>
+<h1>All cars</h1>
+<table>
+    <tr>
+        <th>BRAND</th>
+        <th>MODEL</th>
+        <th>GOS NUMBER</th>
+    </tr>
+    <tr th:each="cars : ${allCars}">
+        <td th:text="${cars.brand}">Brand</td>
+        <td th:text="${cars.model}">model</td>
+        <td th:text="${cars.gosNumber}">gosNumber</td>
+
+    </tr>
+</table>
+<br>
+<input type="text" th:value="Row count" th:attr="${count}">
+<br>
+<p>
+    <a href="../index.html" th:href="@{/}">Return to home</a>
+</p>
+</body>
+</html>
